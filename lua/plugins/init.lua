@@ -15,10 +15,10 @@ require('packer').startup(function()
   		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
 	use 'nvim-tree/nvim-web-devicons'
-	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
 
 -- require plugins settings form this dir
 require('plugins.lualine')
 require('plugins.nvim-tree')
-require('plugins.barbar')
+require('plugins.bufferline')

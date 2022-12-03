@@ -13,6 +13,7 @@ vim.g.mapleader = " "
 -- Plugins adviced settings 
 vim.g.loaded_newtrw = 1
 vim.g.loaded_newtrwPlugin = 1
+vim.opt.termguicolors = true
 
 require('plugins')
 require('keybindings')
