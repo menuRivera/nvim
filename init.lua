@@ -3,11 +3,16 @@
 -- nvim options reference -> https://neovim.io/doc/user/options.html
 
 -- Basic config
-vim.g.mapleader = " "
 vim.cmd[[silent! colorscheme tokyonight-night]]
+
 
 -- Options
 vim.o.relativenumber = true
+vim.g.mapleader = " "
+
+-- Plugins adviced settings 
+vim.g.loaded_newtrw = 1
+vim.g.loaded_newtrwPlugin = 1
 
 require('plugins')
 require('keybindings')
