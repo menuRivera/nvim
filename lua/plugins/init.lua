@@ -16,9 +16,15 @@ require('packer').startup(function()
 	}
 	use 'nvim-tree/nvim-web-devicons'
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+	use {
+		  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+	use("petertriho/nvim-scrollbar")
 end)
 
 -- require plugins settings form this dir
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
+require('plugins.nvim-scrollbar')

@@ -1,5 +1,6 @@
 -- Keybindings
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {options})
+
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
     if opts then
@@ -12,6 +13,7 @@ end
 -- nvim
 map('i', 'jk', '<ESC>')
 map('n', '<leader>w', '<Cmd>w<CR>')
+map('n', '<CR>', 'i<CR><ESC>')
 
 -- nvim-tree
 map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
