@@ -21,6 +21,7 @@ require('packer').startup(function()
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use("petertriho/nvim-scrollbar")
+	use'nvim-treesitter/nvim-treesitter'
 end)
 
 -- require plugins settings form this dir
@@ -28,3 +29,5 @@ require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
 require('plugins.nvim-scrollbar')
+require('plugins.nvim-treesitter')
+
