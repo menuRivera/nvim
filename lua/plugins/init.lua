@@ -20,7 +20,7 @@ require('packer').startup(function()
 		  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use("petertriho/nvim-scrollbar")
+	-- use("petertriho/nvim-scrollbar")
 	use'nvim-treesitter/nvim-treesitter'
 end)
 
@@ -28,6 +28,5 @@ end)
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
-require('plugins.nvim-scrollbar')
 require('plugins.nvim-treesitter')
 

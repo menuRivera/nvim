@@ -16,7 +16,7 @@ map('n', '<leader>w', '<Cmd>w<CR>')
 map('n', '<CR>', 'i<CR><ESC>')
 
 -- nvim-tree
-map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
+map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
 -- bufferline
 map('n', 'gt', '<Cmd>bn<CR>')
