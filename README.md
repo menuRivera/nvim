@@ -14,3 +14,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 5. Run `:PackerSync` from nvim command mode
 6. Enjoy
+
+## To-do
+- [ ] Add lsp language server 
+- [ ] A scrollbar
+- [ ] Telescope
