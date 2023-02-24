@@ -16,6 +16,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 6. Enjoy
 
 ## To-do
-- [ ] Add lsp language server 
-- [ ] A scrollbar
+- [ ] LSP 
+- [ ] Scrollbar
 - [ ] Telescope
+- [ ] Formatting 
