@@ -22,11 +22,24 @@ require('packer').startup(function()
 	}
 	-- use("petertriho/nvim-scrollbar")
 	use'nvim-treesitter/nvim-treesitter'
+
+	-- lsp configurations
+	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	}
+	-- Autocompletion
+	-- todo: make em work
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
 end)
+-- Install packages using :PackerSync
 
 -- require plugins settings form this dir
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
 require('plugins.nvim-treesitter')
+require('plugins.mason')
 
