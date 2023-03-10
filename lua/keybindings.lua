@@ -14,6 +14,9 @@ end
 map('i', 'jk', '<ESC>')
 map('n', '<leader>w', '<Cmd>w<CR>')
 map('n', '<CR>', 'i<CR><ESC>')
+map('i', '{', '{}<left>')
+map('i', '[', '[]<left>')
+map('i', '(', '()<left>')
 
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')

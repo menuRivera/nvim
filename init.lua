@@ -4,8 +4,8 @@
 
 -- Basic config
 vim.cmd[[silent! colorscheme tokyonight-night]]
-vim.cmd[[hi! Normal ctermbg=none ctermfg=none guifg=none guibg=none]]
-vim.cmd[[hi! LineNr ctermbg=none ctermfg=none guifg=none guibg=none]]
+-- vim.cmd[[hi! Normal ctermbg=none ctermfg=none guifg=none guibg=none]]
+-- vim.cmd[[hi! LineNr ctermbg=none ctermfg=none guifg=none guibg=none]]
 
 -- Options
 vim.o.relativenumber = true
@@ -13,6 +13,7 @@ vim.o.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+-- vim.opt.expandtab = true
 
 -- Plugins adviced settings 
 vim.g.loaded_newtrw = 1

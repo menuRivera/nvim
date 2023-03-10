@@ -1,4 +1,4 @@
-require('packer').startup(function()
+require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- use 'gruvbox-community/gruvbox'
 	use 'folke/tokyonight.nvim'
@@ -23,6 +23,7 @@ require('packer').startup(function()
 	-- use("petertriho/nvim-scrollbar")
 	use'nvim-treesitter/nvim-treesitter'
 
+	-- replace the following code with lsp-zero configs
 	-- lsp configurations
 	use {
 		"williamboman/mason.nvim",
