@@ -6,7 +6,7 @@ function map(mode, lhs, rhs, opts)
     if opts then
         options = vim.tbl_extend("force", options, opts)
     end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
 
@@ -20,6 +20,11 @@ map('i', '(', '()<left>')
 
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
+
+-- nvim-comment
+map({'i', 'n'}, '<C-/>', '<Cmd>CommentToggle<CR>')
+-- fix
+map('x', '<C-/>', "<Cmd>'<,'>CommentToggle<CR>")
 
 -- bufferline
 map('n', 'gt', '<Cmd>bn<CR>')

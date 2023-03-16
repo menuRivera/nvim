@@ -28,6 +28,10 @@ require('packer').startup(function(use)
 	-- use("petertriho/nvim-scrollbar")
 	use'nvim-treesitter/nvim-treesitter'
 
+	-- Comments
+	use"terrortylor/nvim-comment"
+	use'JoosepAlviste/nvim-ts-context-commentstring'
+
 	-- LSP
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -59,4 +63,5 @@ require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
 require('plugins.nvim-treesitter')
+require('plugins.nvim-comment')
 require('plugins.lsp-zero')
