@@ -16,7 +16,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 6. Enjoy
 
 ## To-do
-- [ ] LSP 
+- [x] LSP 
+- [x] GitSigns
+- [x] Toggle comments
 - [ ] Scrollbar
 - [ ] Telescope
+	- [x] Installation
+	- [ ] Configuration
 - [ ] Formatting 

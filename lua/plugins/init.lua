@@ -25,6 +25,10 @@ require('packer').startup(function(use)
 		  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
+	-- gitsigns
+	use'lewis6991/gitsigns.nvim'
+
 	-- use("petertriho/nvim-scrollbar")
 	use'nvim-treesitter/nvim-treesitter'
 
@@ -65,3 +69,4 @@ require('plugins.bufferline')
 require('plugins.nvim-treesitter')
 require('plugins.nvim-comment')
 require('plugins.lsp-zero')
+require('plugins.gitsigns')
