@@ -9,6 +9,8 @@ vim.cmd[[silent! colorscheme tokyonight-night]]
 
 -- Options
 vim.o.relativenumber = true
+vim.o.number = true
+
 -- vim.g.mapleader = " "
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
