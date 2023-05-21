@@ -2,6 +2,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- theme
 	use 'folke/tokyonight.nvim'
+	use 'nvim-tree/nvim-web-devicons'
 
 	-- lualine
 	use {
@@ -16,7 +17,6 @@ require('packer').startup(function(use)
 		},
   		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
-	use 'nvim-tree/nvim-web-devicons'
 
 	-- bufferline
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
@@ -24,6 +24,22 @@ require('packer').startup(function(use)
 	use {
 		  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	-- Terminal
+	use {"akinsho/toggleterm.nvim", tag = '*'}
+
+	-- Trouble
+	use {
+	  "folke/trouble.nvim",
+	  requires = "nvim-tree/nvim-web-devicons",
+	  config = function()
+		require("trouble").setup {
+		  -- your configuration comes here
+		  -- or leave it empty to use the default settings
+		  -- refer to the configuration section below
+		}
+	  end
 	}
 
 	-- gitsigns
@@ -70,3 +86,4 @@ require('plugins.nvim-treesitter')
 require('plugins.nvim-comment')
 require('plugins.lsp-zero')
 require('plugins.gitsigns')
+require('plugins.toggleterm')

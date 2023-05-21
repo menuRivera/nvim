@@ -22,6 +22,9 @@ map('n', '<C-p>', telescope.find_files)
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
+-- Trouble.nvim
+map('n', '<C-b>', '<Cmd>TroubleToggle<CR>')
+
 -- nvim-comment
 map({'i', 'n'}, '<C-/>', '<Cmd>CommentToggle<CR>')
 -- fix: multiple lines comment toggle
