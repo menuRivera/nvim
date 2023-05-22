@@ -23,7 +23,7 @@ map('n', '<C-p>', telescope.find_files)
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
 -- Trouble.nvim
-map('n', '<C-b>', '<Cmd>TroubleToggle<CR>')
+map('n', '<C-b>', '<Cmd>TroubleToggle document_diagnostics<CR>')
 
 -- nvim-comment
 map({'i', 'n'}, '<C-/>', '<Cmd>CommentToggle<CR>')
