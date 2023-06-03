@@ -1,6 +1,6 @@
 require('bufferline').setup{
 	options = {
-		show_buffer_icons = true,
+		show_buffer_icons = false,
 		always_show_bufferline = false,
 		offsets = {
 			{
