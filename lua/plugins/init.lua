@@ -2,7 +2,11 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- theme
 	use 'folke/tokyonight.nvim'
-	use 'nvim-tree/nvim-web-devicons'
+	-- use 'nvim-tree/nvim-web-devicons'
+	use {
+	  "projekt0n/circles.nvim",
+	  requires = {"nvim-tree/nvim-web-devicons"}
+	}
 
 	-- lualine
 	use {
@@ -79,6 +83,7 @@ end)
 -- Install packages using :PackerSync
 
 -- require plugins settings form this dir
+require('plugins.icons')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')

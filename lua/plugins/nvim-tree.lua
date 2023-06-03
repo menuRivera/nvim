@@ -1,5 +1,6 @@
 local lib = require("nvim-tree.lib")
 local view = require("nvim-tree.view")
+local circles = require("circles")
 
 
 local function collapse_all()
@@ -130,30 +131,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             folder_arrow = true,
             git = true,
           },
-          glyphs = {
-            default = "",
-            symlink = "",
-            bookmark = "",
-            folder = {
-              arrow_closed = "",
-              arrow_open = "",
-              default = "",
-              open = "",
-              empty = "",
-              empty_open = "",
-              symlink = "",
-              symlink_open = "",
-            },
-            git = {
-              unstaged = "✗",
-              staged = "✓",
-              unmerged = "",
-              renamed = "➜",
-              untracked = "★",
-              deleted = "",
-              ignored = "◌",
-            },
-          },
+		  glyphs = circles.get_nvimtree_glyphs()
         },
         special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
         symlink_destination = true,
