@@ -167,7 +167,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         },
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,
         custom = {},
         exclude = {},
       },
@@ -178,7 +178,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       },
       git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         show_on_dirs = true,
         timeout = 400,
       },
