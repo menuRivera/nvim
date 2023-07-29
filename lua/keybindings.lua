@@ -17,6 +17,7 @@ map('n', '<CR>', 'i<CR><ESC>')
 map('i', '{', '{}<left>')
 map('i', '[', '[]<left>')
 map('i', '(', '()<left>')
+map('i', 'jk', '<C-c>')
 map('n', '<C-p>', telescope.find_files)
 
 -- nvim-tree
