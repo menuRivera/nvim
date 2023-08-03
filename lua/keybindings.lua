@@ -19,6 +19,8 @@ map('i', '[', '[]<left>')
 map('i', '(', '()<left>')
 map('i', 'jk', '<C-c>')
 map('n', '<C-p>', telescope.find_files)
+map('n', '<C-e>', '<C-e><C-e><C-e>')
+map('n', '<C-y>', '<C-y><C-y><C-y>')
 
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
@@ -29,12 +31,18 @@ map('n', '<C-b>', '<Cmd>TroubleToggle document_diagnostics<CR>')
 -- nvim-comment
 map({'i', 'n'}, '<C-/>', '<Cmd>CommentToggle<CR>')
 -- fix: multiple lines comment toggle
-map('x', '<C-/>', "<Cmd>'<,'>CommentToggle<CR>")
+-- map('x', '<C-/>', "<Cmd>'<,'>CommentToggle<CR>")
 
 -- bufferline
 -- next buffer
-map('n', 'gt', '<Cmd>bn<CR>')
+map('n', 'gt', '<Cmd>BufferLineCycleNext<CR>')
+map('n', 'gl', '<Cmd>BufferLineCycleNext<CR>')
 -- previous buffer
-map('n', 'gT', '<Cmd>bp<CR>')
+map('n', 'gT', '<Cmd>BufferLineCyclePrev<CR>')
+map('n', 'gh', '<Cmd>BufferLineCyclePrev<CR>')
 -- close buffer
 map('n', '<C-w>', '<Cmd>bd<CR>')
+-- move buffer next
+map('n', 'gL', '<Cmd>BufferLineMoveNext<CR>')
+-- move buffer prev
+map('n', 'gH', '<Cmd>BufferLineMovePrev<CR>')
