@@ -10,9 +10,10 @@ function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
-
 -- nvim
 map('n', '<leader>w', '<Cmd>w<CR>')
+map('n', '<leader>q', '<Cmd>q<CR>')
+map('n', '<leader>f', 'gggqG<C-o>') -- fix
 map('n', '<CR>', 'i<CR><ESC>')
 map('i', '{', '{}<left>')
 map('i', '[', '[]<left>')
