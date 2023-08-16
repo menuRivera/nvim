@@ -3,10 +3,10 @@
 local telescope = require('telescope.builtin')
 
 function map(mode, lhs, rhs, opts)
-    local options = { noremap = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
@@ -19,10 +19,13 @@ map('i', '{', '{}<left>')
 map('i', '[', '[]<left>')
 map('i', '(', '()<left>')
 map('i', 'jk', '<C-c>')
-map('n', '<C-p>', telescope.find_files)
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
+-- telescope
+map('n', '<C-p>', telescope.find_files)
+map('n', '<C-f>', telescope.live_grep)
+map('n', '<C-g>', telescope.git_status)
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
@@ -30,7 +33,7 @@ map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 map('n', '<C-b>', '<Cmd>TroubleToggle document_diagnostics<CR>')
 
 -- nvim-comment
-map({'i', 'n'}, '<C-/>', '<Cmd>CommentToggle<CR>')
+map({ 'i', 'n' }, '<C-/>', '<Cmd>CommentToggle<CR>')
 -- fix: multiple lines comment toggle
 -- map('x', '<C-/>', "<Cmd>'<,'>CommentToggle<CR>")
 
