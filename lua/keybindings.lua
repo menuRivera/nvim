@@ -22,6 +22,9 @@ map('i', 'jk', '<C-c>')
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
+-- lsp 
+map('n', '<leader>r', '<Cmd>LspRestart<CR>')
+
 -- telescope
 map('n', '<C-p>', telescope.find_files)
 map('n', '<C-f>', telescope.live_grep)
