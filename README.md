@@ -7,20 +7,17 @@
 ```sh
 git clone https://github.com/menuRivera/nvim
 ```
-4. Install [Packer](https://github.com/wbthomason/packer.nvim)
-```sh
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
+4. Install [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
 5. Run `:PackerSync` from nvim command mode
 6. Enjoy
 
 ## To-do
+- [ ] Split buffer keymappings / configuration 
+- [ ] Scrollbar 
 - [x] LSP 
 - [x] GitSigns
 - [x] Toggle comments
-- [ ] Scrollbar
-- [ ] Telescope
+- [x] Telescope
 	- [x] Installation
-	- [ ] Configuration
-- [ ] Formatting 
+	- [x] Configuration
+- [x] Formatting 
