@@ -13,10 +13,10 @@ git clone https://github.com/menuRivera/nvim
 
 ## To-do
 - [ ] Split buffer keymappings / configuration 
-- [ ] Scrollbar 
 - [x] LSP 
 - [x] GitSigns
 - [x] Toggle comments
+- [x] Fix toggle comments
 - [x] Telescope
 	- [x] Installation
 	- [x] Configuration

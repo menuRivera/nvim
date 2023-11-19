@@ -53,7 +53,7 @@ require('packer').startup(function(use)
 	use 'nvim-treesitter/nvim-treesitter'
 
 	-- Comments
-	use "terrortylor/nvim-comment"
+	use "numToStr/Comment.nvim"
 	use 'JoosepAlviste/nvim-ts-context-commentstring'
 
 	-- LSP
@@ -87,8 +87,8 @@ require('plugins.icons')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
+require('plugins.comment')
 require('plugins.nvim-treesitter')
-require('plugins.nvim-comment')
 require('plugins.lsp-zero')
 require('plugins.gitsigns')
 require('plugins.toggleterm')

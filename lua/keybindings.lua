@@ -13,7 +13,6 @@ end
 -- nvim
 map('n', '<leader>w', '<Cmd>w<CR>')
 map('n', '<leader>q', '<Cmd>q<CR>')
-map('n', '<leader>f', 'gggqG<C-o>') -- fix
 map('n', '<CR>', 'i<CR><ESC>')
 map('i', '{', '{}<left>')
 map('i', '[', '[]<left>')
@@ -22,23 +21,20 @@ map('i', 'jk', '<C-c>')
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
--- lsp 
+-- lsp
 map('n', '<leader>r', '<Cmd>LspRestart<CR>')
+map('n', '<leader>f', '<Cmd>LspZeroFormat<CR>')
 
 -- telescope
 map('n', '<C-p>', telescope.find_files)
 map('n', '<C-f>', telescope.live_grep)
 map('n', '<C-g>', telescope.git_status)
+
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
 -- Trouble.nvim
 map('n', '<C-b>', '<Cmd>TroubleToggle document_diagnostics<CR>')
-
--- nvim-comment
-map({ 'i', 'n' }, '<C-/>', '<Cmd>CommentToggle<CR>')
--- fix: multiple lines comment toggle
--- map('x', '<C-/>', "<Cmd>'<,'>CommentToggle<CR>")
 
 -- bufferline
 -- next buffer
