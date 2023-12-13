@@ -95,7 +95,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             relative = "editor",
             border = "rounded",
             width = 30,
-            height = 30,
+            height = 40,
             row = 1,
             col = 1,
           },
