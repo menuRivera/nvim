@@ -21,6 +21,8 @@ map('i', 'jk', '<C-c>')
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
+map('n', '<leader>m', '<Cmd>MarkdownPreviewToggle<Cr>')
+
 -- lsp
 map('n', '<leader>r', '<Cmd>LspRestart<CR>')
 map('n', '<leader>f', '<Cmd>LspZeroFormat<CR>')

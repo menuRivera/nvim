@@ -8,6 +8,12 @@ require('packer').startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons" }
 	}
 
+	-- markdown previewer
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+
 	-- lualine
 	use {
 		'nvim-lualine/lualine.nvim',
@@ -19,7 +25,7 @@ require('packer').startup(function(use)
 		requires = {
 			'nvim-tree/nvim-web-devicons', -- optional, for file icons
 		},
-		tag = 'nightly'               -- optional, updated every week. (see issue #1193)
+		tag = 'nightly'           -- optional, updated every week. (see issue #1193)
 	}
 
 	-- bufferline
