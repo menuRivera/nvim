@@ -12,6 +12,7 @@ end
 
 -- nvim
 map('n', '<leader>w', '<Cmd>w<CR>')
+
 -- map('n', '<leader>q', '<Cmd>q<CR>')
 map('n', '<CR>', 'i<CR><ESC>')
 map('i', '{', '{}<left>')
@@ -47,6 +48,7 @@ map('n', 'gT', '<Cmd>BufferLineCyclePrev<CR>')
 map('n', 'gh', '<Cmd>BufferLineCyclePrev<CR>')
 -- close buffer
 map('n', '<C-w>', '<Cmd>bd<CR>')
+map('n', 'X', '<Cmd>bd<CR>')
 -- move buffer next
 map('n', 'gL', '<Cmd>BufferLineMoveNext<CR>')
 -- move buffer prev
