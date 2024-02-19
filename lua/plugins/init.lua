@@ -30,7 +30,8 @@ require('packer').startup(function(use)
 
 	-- bufferline
 	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
-	-- telescope?
+
+	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = { { 'nvim-lua/plenary.nvim' } }
@@ -96,5 +97,6 @@ require('plugins.bufferline')
 require('plugins.comment')
 require('plugins.nvim-treesitter')
 require('plugins.lsp-zero')
+require('plugins.telescope')
 require('plugins.gitsigns')
 require('plugins.toggleterm')
