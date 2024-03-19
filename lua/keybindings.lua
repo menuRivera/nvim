@@ -19,6 +19,7 @@ map('i', '{', '{}<left>')
 map('i', '[', '[]<left>')
 map('i', '(', '()<left>')
 map('i', 'jk', '<C-c>')
+map('i', 'JK', '<C-c>')
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
