@@ -34,6 +34,9 @@ map('n', '<C-p>', telescope.find_files)
 map('n', '<C-f>', telescope.live_grep)
 map('n', '<C-g>', telescope.git_status)
 
+-- gitsigns
+map('n', '<leader>b', '<Cmd>Gitsigns blame_line<CR>')
+
 -- nvim-tree
 map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
 
