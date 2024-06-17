@@ -43,6 +43,7 @@ require('packer').startup(function(use)
 	-- Trouble
 	use {
 		"folke/trouble.nvim",
+		tag="v2.10.0",
 		requires = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("trouble").setup {
