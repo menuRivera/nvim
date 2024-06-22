@@ -29,7 +29,7 @@ require('packer').startup(function(use)
 	}
 
 	-- bufferline
-	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+	use { 'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons' }
 
 	-- telescope
 	use {
@@ -43,7 +43,7 @@ require('packer').startup(function(use)
 	-- Trouble
 	use {
 		"folke/trouble.nvim",
-		tag="v2.10.0",
+		tag = "v2.10.0",
 		requires = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("trouble").setup {
