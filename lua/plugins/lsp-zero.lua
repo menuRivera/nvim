@@ -6,7 +6,6 @@ local lsp = require('lsp-zero').preset({
 	suggest_lsp_servers = true,
 })
 
--- FIX: [LSP] Format request failed, no matching language servers.
 lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
 	local opts = { buffer = bufnr }
