@@ -2,6 +2,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- theme
 	use 'folke/tokyonight.nvim'
+	-- use { "catppuccin/nvim", as = "catppuccin" }
 	-- use 'nvim-tree/nvim-web-devicons'
 	use {
 		"projekt0n/circles.nvim",
@@ -98,6 +99,7 @@ require('plugins.icons')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
+-- require('plugins.catppuccin')
 require('plugins.comment')
 require('plugins.nvim-treesitter')
 require('plugins.lsp-zero')
