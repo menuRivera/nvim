@@ -44,13 +44,13 @@ require('lualine').setup {
 		section_separators = { left = '', right = '' },
 	},
 	sections = {
-		lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+		lualine_a = { { 'mode', separator = { left = '', right = '' }, right_padding = 2 } },
 		lualine_b = { 'branch', { 'filename', path = 1 }, 'diff', 'diagnostics' },
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { 'filetype', 'progress' },
 		lualine_z = {
-			{ 'location', separator = { right = '' }, left_padding = 2 },
+			{ 'location', separator = { left = '', right = '' }, left_padding = 2 }
 		},
 	},
 	inactive_sections = {
