@@ -2,6 +2,7 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- theme
 	use 'folke/tokyonight.nvim'
+	use 'brenoprata10/nvim-highlight-colors'
 	-- use { "catppuccin/nvim", as = "catppuccin" }
 	use {
 		"projekt0n/circles.nvim",
@@ -95,14 +96,15 @@ end)
 -- Install packages using :PackerSync
 
 -- require plugins settings form this dir
+-- require('plugins.catppuccin')
 require('plugins.icons')
 require('plugins.lualine')
 require('plugins.nvim-tree')
 require('plugins.bufferline')
--- require('plugins.catppuccin')
 require('plugins.comment')
 require('plugins.nvim-treesitter')
 require('plugins.lsp-zero')
+require('plugins.nvim-highlight-colors')
 require('plugins.telescope')
 require('plugins.gitsigns')
 require('plugins.toggleterm')
