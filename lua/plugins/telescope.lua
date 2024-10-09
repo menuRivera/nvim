@@ -3,5 +3,8 @@ require('telescope').setup {
 		find_files = {
 			theme = "dropdown"
 		},
+	},
+	extensions = {
+		fzf = true
 	}
 }

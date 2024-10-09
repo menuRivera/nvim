@@ -3,7 +3,6 @@ require('packer').startup(function(use)
 	-- theme
 	use 'folke/tokyonight.nvim'
 	-- use { "catppuccin/nvim", as = "catppuccin" }
-	-- use 'nvim-tree/nvim-web-devicons'
 	use {
 		"projekt0n/circles.nvim",
 		requires = { "nvim-tree/nvim-web-devicons" }
@@ -33,6 +32,7 @@ require('packer').startup(function(use)
 	use { 'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons' }
 
 	-- telescope
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = {

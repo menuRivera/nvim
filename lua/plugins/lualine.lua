@@ -7,7 +7,7 @@ local colors = {
 	red    = '#ff6e66',
 	yellow = '#e0af68',
 	violet = '#bb9af7',
-	grey   = '#2e3349',
+	grey   = '#3c4157',
 }
 
 local bubbles_theme = {
@@ -39,6 +39,7 @@ require('lualine').setup {
 	options = {
 		icons_enabled = false,
 		theme = bubbles_theme,
+		globalstatus = true,
 		component_separators = '',
 		section_separators = { left = '', right = '' },
 	},
