@@ -11,23 +11,40 @@ function map(mode, lhs, rhs, opts)
 end
 
 -- nvim
-map('n', '<leader>w', '<Cmd>w<CR>')
+map('n', '<leader>w', '<cmd>w<cr>')
 
--- map('n', '<leader>q', '<Cmd>q<CR>')
-map('n', '<CR>', 'i<CR><ESC>')
+-- map('n', '<leader>q', '<cmd>q<cr>')
+map('n', '<cr>', 'i<cr><ESC>')
+
 map('i', '{', '{}<left>')
+map('i', '{<bs>', '')
+map('i', '{<leader>', '{}<left><leader><leader><left>')
+map('i', '{<cr>', '{<cr><cr>}<up><c-c>cc')
+
 map('i', '[', '[]<left>')
+map('i', '[<bs>', '')
+map('i', '[<leader>', '[]<left><leader><leader><left>')
+-- map('i', '[<cr>', '[<cr><cr>]<up><tab>')
+map('i', '[<cr>', '[<cr><cr>]<up><c-c>cc')
+
 map('i', '(', '()<left>')
+map('i', '(<leader>', '()<left><leader><leader><left>')
+map('i', '(<bs>', '')
+
 map('i', 'jk', '<C-c>')
+map('i', 'Jk', '<C-c>')
+map('i', 'jK', '<C-c>')
 map('i', 'JK', '<C-c>')
+
+-- scroll
 map('n', '<C-e>', '<C-e><C-e><C-e>')
 map('n', '<C-y>', '<C-y><C-y><C-y>')
 
-map('n', '<leader>m', '<Cmd>MarkdownPreviewToggle<Cr>')
+map('n', '<leader>m', '<cmd>MarkdownPreviewToggle<Cr>')
 
 -- lsp
-map('n', '<leader>r', '<Cmd>LspRestart<CR>')
-map('n', '<leader>f', '<Cmd>LspZeroFormat<CR>')
+map('n', '<leader>r', '<cmd>LspRestart<cr>')
+map('n', '<leader>f', '<cmd>LspZeroFormat<cr>')
 
 -- telescope
 map('n', '<C-p>', telescope.find_files)
@@ -35,25 +52,25 @@ map('n', '<C-f>', telescope.live_grep)
 map('n', '<C-g>', telescope.git_status)
 
 -- gitsigns
-map('n', '<leader>b', '<Cmd>Gitsigns blame_line<CR>')
+map('n', '<leader>b', '<cmd>Gitsigns blame_line<cr>')
 
 -- nvim-tree
-map('n', '<C-h>', '<Cmd>NvimTreeToggle<CR>')
+map('n', '<C-h>', '<cmd>NvimTreeToggle<cr>')
 
 -- Trouble.nvim
-map('n', '<C-b>', '<Cmd>TroubleToggle document_diagnostics<CR>')
+map('n', '<C-b>', '<cmd>TroubleToggle document_diagnostics<cr>')
 
 -- bufferline
 -- next buffer
-map('n', 'gt', '<Cmd>BufferLineCycleNext<CR>')
-map('n', 'gl', '<Cmd>BufferLineCycleNext<CR>')
+map('n', 'gt', '<cmd>BufferLineCycleNext<cr>')
+map('n', 'gl', '<cmd>BufferLineCycleNext<cr>')
 -- previous buffer
-map('n', 'gT', '<Cmd>BufferLineCyclePrev<CR>')
-map('n', 'gh', '<Cmd>BufferLineCyclePrev<CR>')
+map('n', 'gT', '<cmd>BufferLineCyclePrev<cr>')
+map('n', 'gh', '<cmd>BufferLineCyclePrev<cr>')
 -- close buffer
-map('n', '<C-w>', '<Cmd>bd<CR>')
-map('n', 'X', '<Cmd>bd<CR>')
+map('n', '<C-w>', '<cmd>bd<cr>')
+map('n', 'X', '<cmd>bd<cr>')
 -- move buffer next
-map('n', 'gL', '<Cmd>BufferLineMoveNext<CR>')
+map('n', 'gL', '<cmd>BufferLineMoveNext<cr>')
 -- move buffer prev
-map('n', 'gH', '<Cmd>BufferLineMovePrev<CR>')
+map('n', 'gH', '<cmd>BufferLineMovePrev<cr>')
