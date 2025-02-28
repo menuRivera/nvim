@@ -4,6 +4,7 @@ require('packer').startup(function(use)
 	use 'folke/tokyonight.nvim'
 	use 'brenoprata10/nvim-highlight-colors'
 	-- use { "catppuccin/nvim", as = "catppuccin" }
+	-- use {'nyoom-engineering/oxocarbon.nvim'}
 	use {
 		"projekt0n/circles.nvim",
 		requires = { "nvim-tree/nvim-web-devicons" }

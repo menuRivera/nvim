@@ -14,18 +14,18 @@ end
 map('n', '<leader>w', '<cmd>w<cr>')
 
 -- map('n', '<leader>q', '<cmd>q<cr>')
-map('n', '<cr>', 'i<cr><ESC>')
+map('n', '<cr>', 'i<cr><esc>')
 
 map('i', '{', '{}<left>')
 map('i', '{<bs>', '')
 map('i', '{<leader>', '{}<left><leader><leader><left>')
-map('i', '{<cr>', '{<cr><cr>}<up><c-c>cc')
+-- "_ is to send whatever was yanked to register _ (black hole)
+map('i', '{<cr>', '{<cr><cr>}<up><c-c>"_cc')
 
 map('i', '[', '[]<left>')
 map('i', '[<bs>', '')
 map('i', '[<leader>', '[]<left><leader><leader><left>')
--- map('i', '[<cr>', '[<cr><cr>]<up><tab>')
-map('i', '[<cr>', '[<cr><cr>]<up><c-c>cc')
+map('i', '[<cr>', '[<cr><cr>]<up><c-c>"_cc')
 
 map('i', '(', '()<left>')
 map('i', '(<leader>', '()<left><leader><leader><left>')

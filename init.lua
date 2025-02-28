@@ -3,9 +3,11 @@
 -- nvim options reference -> https://neovim.io/doc/user/options.html
 
 -- Basic config
-vim.cmd [[silent! colorscheme tokyonight-night]]
 -- vim.cmd[[hi! Normal ctermbg=none ctermfg=none guifg=none guibg=none]]
 -- vim.cmd[[hi! LineNr ctermbg=none ctermfg=none guifg=none guibg=none]]
+
+-- Theme
+vim.cmd('colorscheme tokyonight-night')
 
 -- Options
 vim.o.relativenumber = true
