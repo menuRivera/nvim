@@ -83,7 +83,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 			},
 		},
 		float = {
-			enable = false,
+			enable = true,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
@@ -122,7 +122,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 			show = {
 				file = false,
 				folder = false,
-				folder_arrow = false,
+				folder_arrow = true,
 				git = true,
 			},
 			glyphs = circles.get_nvimtree_glyphs()
