@@ -2,7 +2,7 @@
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {options})
 local telescope = require('telescope.builtin')
 
-function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
 	local options = { noremap = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)

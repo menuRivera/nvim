@@ -1,5 +1,5 @@
-local lib = require("nvim-tree.lib")
-local view = require("nvim-tree.view")
+-- local lib = require("nvim-tree.lib")
+-- local view = require("nvim-tree.view")
 
 local function on_attach(bufnr)
 	local api = require "nvim-tree.api"
@@ -14,6 +14,8 @@ local function on_attach(bufnr)
 	-- custom mappings
 	vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 	vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
+	vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Open'))
+	vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
 end
 
 
@@ -25,9 +27,6 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 	hijack_cursor = true,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
-	-- ignore_buffer_on_setup = false,
-	-- open_on_setup = false,
-	-- open_on_setup_file = false,
 	sort_by = "name",
 	root_dirs = {},
 	prefer_startup_root = false,
@@ -40,13 +39,13 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 	view = {
 		adaptive_size = true,
 		centralize_selection = false,
-		width = 40,
+		width = 20,
 		-- hide_root_folder = true,
 		side = "left",
 		preserve_window_proportions = false,
-		number = true,
-		relativenumber = true,
-		signcolumn = "yes",
+		number = false,
+		relativenumber = false,
+		signcolumn = "no",
 		float = {
 			enable = true,
 			quit_on_focus_loss = true,
@@ -66,7 +65,8 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 		highlight_git = false,
 		full_name = false,
 		highlight_opened_files = "all",
-		--  root_folder_label = ":~:s?$?/..?",
+		-- root_folder_label = ":~:s?$?/..?",
+		root_folder_label = false,
 		indent_width = 2,
 		indent_markers = {
 			enable = true,
@@ -144,9 +144,9 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 	actions = {
 		use_system_clipboard = true,
 		change_dir = {
-			enable = true,
+			enable = false,
 			global = false,
-			restrict_above_cwd = false,
+			restrict_above_cwd = true,
 		},
 		expand_all = {
 			max_folder_discovery = 300,
@@ -203,3 +203,11 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 		},
 	},
 } -- END_DEFAULT_OPTS
+
+vim.cmd([[
+    :hi      NvimTreeExecFile     guifg=#92f5c4 gui=bold
+    :hi      NvimTreeSpecialFile  guifg=#b891e3 gui=underline
+    :hi      NvimTreeCursorLineNr guifg=#57608a gui=bold
+    " :hi      NvimTreeSymlink     guifg=Yellow  gui=italic
+    " :hi link NvimTreeImageFile   Title
+]])
