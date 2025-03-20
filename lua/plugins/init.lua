@@ -2,6 +2,8 @@ require('lazy').setup({
 	-- THEME
 	{
 		'folke/tokyonight.nvim',
+		lazy = false,
+		priority = 1000,
 		config = function()
 			vim.cmd('colorscheme tokyonight-night')
 		end
@@ -14,7 +16,6 @@ require('lazy').setup({
 		end,
 		lazy = false
 	},
-
 
 	-- CORE
 	{
@@ -77,8 +78,9 @@ require('lazy').setup({
 			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-cmdline',
-			'hrsh7th/cmp-calc',
 			'hrsh7th/cmp-nvim-lua',
+			'L3MON4D3/LuaSnip',
+			'saadparwaiz1/cmp_luasnip',
 		},
 		config = function()
 			require("plugins.config.cmp")
@@ -99,9 +101,9 @@ require('lazy').setup({
 	},
 
 	-- EXTRAS
-	'L3MON4D3/LuaSnip',
-	'saadparwaiz1/cmp_luasnip',
-	'rafamadriz/friendly-snippets',
+	-- 'L3MON4D3/LuaSnip',
+	-- 'saadparwaiz1/cmp_luasnip',
+	-- 'rafamadriz/friendly-snippets',
 	{
 		'lewis6991/gitsigns.nvim',
 		config = function()

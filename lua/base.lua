@@ -1,6 +1,3 @@
-
-
-
 vim.o.relativenumber = true
 vim.o.number = true
 
@@ -20,3 +17,11 @@ vim.opt.swapfile = false
 vim.g.loaded_newtrw = 1
 vim.g.loaded_newtrwPlugin = 1
 vim.opt.termguicolors = true
+
+-- diagnostics
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+})

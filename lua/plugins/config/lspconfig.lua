@@ -29,13 +29,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+-- hover and signature window style
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 	vim.lsp.handlers.hover,
 	{
 		border = "rounded", -- Options: "single", "double", "rounded", "solid", "shadow", or false.
 	}
 )
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+	vim.lsp.handlers.signature_help,
+	{
+		border = "rounded", -- Options: "single", "double", "rounded", "solid", "shadow", or false.
+	}
+)
 
+-- auto setup lsps with mason
 require('mason-lspconfig').setup({
 	ensure_installed = {},
 	handlers = {
