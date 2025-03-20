@@ -1,0 +1,22 @@
+
+
+
+vim.o.relativenumber = true
+vim.o.number = true
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+-- vim.opt.smartindent = true
+-- vim.opt.cindent = true
+vim.opt.signcolumn = 'yes'
+vim.opt.swapfile = false
+-- vim.opt.expandtab = true
+
+-- Plugins adviced settings
+vim.g.loaded_newtrw = 1
+vim.g.loaded_newtrwPlugin = 1
+vim.opt.termguicolors = true
