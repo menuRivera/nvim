@@ -2,7 +2,6 @@
 -- nvim lua api reference -> https://neovim.io/doc/user/lua.html
 -- nvim options reference -> https://neovim.io/doc/user/options.html
 
-print('start')
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
