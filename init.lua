@@ -2,31 +2,24 @@
 -- nvim lua api reference -> https://neovim.io/doc/user/lua.html
 -- nvim options reference -> https://neovim.io/doc/user/options.html
 
--- Basic config
--- vim.cmd[[hi! Normal ctermbg=none ctermfg=none guifg=none guibg=none]]
--- vim.cmd[[hi! LineNr ctermbg=none ctermfg=none guifg=none guibg=none]]
+print('start')
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out,                            "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Theme
-vim.cmd('colorscheme tokyonight-night')
-
--- Options
-vim.o.relativenumber = true
-vim.o.number = true
-
-vim.g.mapleader = " "
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
--- vim.opt.smartindent = true
--- vim.opt.cindent = true
-vim.opt.signcolumn = 'yes'
-vim.opt.swapfile = false
--- vim.opt.expandtab = true
-
--- Plugins adviced settings
-vim.g.loaded_newtrw = 1
-vim.g.loaded_newtrwPlugin = 1
-vim.opt.termguicolors = true
-
+require('base')
 require('plugins')
 require('keybindings')

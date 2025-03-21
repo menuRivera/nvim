@@ -2,7 +2,7 @@
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {options})
 local telescope = require('telescope.builtin')
 
-function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
 	local options = { noremap = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
@@ -44,7 +44,8 @@ map('n', '<leader>m', '<cmd>MarkdownPreviewToggle<Cr>')
 
 -- lsp
 map('n', '<leader>r', '<cmd>LspRestart<cr>')
-map('n', '<leader>f', '<cmd>LspZeroFormat<cr>')
+map('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
+-- map('n', '<leader>f', '<cmd>LspZeroFormat<cr>')
 
 -- telescope
 map('n', '<C-p>', telescope.find_files)
