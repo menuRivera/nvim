@@ -82,6 +82,8 @@ require('lazy').setup({
 			'hrsh7th/cmp-nvim-lua',
 			'ray-x/cmp-sql',
 			'L3MON4D3/LuaSnip',
+			-- TODO: fix this
+			-- 'rafamadriz/friendly-snippets',
 			'saadparwaiz1/cmp_luasnip',
 		},
 		config = function()
@@ -103,9 +105,32 @@ require('lazy').setup({
 	},
 
 	-- EXTRAS
-	-- 'L3MON4D3/LuaSnip',
-	-- 'saadparwaiz1/cmp_luasnip',
-	-- 'rafamadriz/friendly-snippets',
+	{
+		"folke/snacks.nvim",
+		keys = {
+			{ "<c-g>", "<cmd>lua Snacks.lazygit()<cr>" }
+		},
+		-- map('n', '<c-g>', '<cmd>lua Snacks.lazygit()<cr>')
+		---@type snacks.Config
+		opts = {
+			lazygit = {
+				configure = true,
+				config = {
+					gui = {
+						nerdFontsVersion = "",
+					},
+				},
+			}
+		}
+	},
+	{
+		'Wansmer/treesj',
+		cmd = { 'TSJToggle', 'TSJSplit', 'TSJJoin' },
+		dependencies = { 'nvim-treesitter/nvim-treesitter' },
+		config = function()
+			require('treesj').setup({})
+		end,
+	},
 	{
 		'lewis6991/gitsigns.nvim',
 		config = function()

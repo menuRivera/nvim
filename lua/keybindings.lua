@@ -50,7 +50,7 @@ map('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
 -- telescope
 map('n', '<C-p>', telescope.find_files)
 map('n', '<C-f>', telescope.live_grep)
-map('n', '<C-g>', telescope.git_status)
+-- map('n', '<C-g>', telescope.git_status)
 
 -- gitsigns
 map('n', '<leader>b', '<cmd>Gitsigns blame_line<cr>')
@@ -75,3 +75,9 @@ map('n', 'X', '<cmd>bd<cr>')
 map('n', 'gL', '<cmd>BufferLineMoveNext<cr>')
 -- move buffer prev
 map('n', 'gH', '<cmd>BufferLineMovePrev<cr>')
+
+
+-- treesj
+map('n', '<leader>t', '<cmd>TSJToggle<cr>')
+map('n', '<leader>s', '<cmd>TSJSplit<cr>')
+map('n', '<leader>j', '<cmd>TSJJoin<cr>')
