@@ -70,6 +70,20 @@ require('lazy').setup({
 		opts = {},
 		lazy = false
 	},
+	-- {
+	-- 	'saghen/blink.cmp',
+	-- 	dependencies = { 'rafamadriz/friendly-snippets' },
+	-- 	version = '1.*',
+	-- 	opts = {
+	-- 		keymap = { preset = 'enter' },
+	-- 		sources = {
+	-- 			default = { 'lsp', 'path', 'snippets', 'buffer' }
+	-- 		},
+	-- 		fuzzy = { implementation = "prefer_rust_with_warning" }
+	-- 	}
+	--
+	-- },
+
 	{
 		'hrsh7th/nvim-cmp',
 		event = "InsertEnter",

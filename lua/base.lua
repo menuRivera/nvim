@@ -1,5 +1,6 @@
 vim.o.relativenumber = true
 vim.o.number = true
+vim.opt.showmode = false
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -25,3 +26,7 @@ vim.diagnostic.config({
 	underline = true,
 	update_in_insert = false,
 })
+
+-- folds
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

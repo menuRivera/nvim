@@ -13,7 +13,6 @@ end
 -- nvim
 map('n', '<leader>w', '<cmd>w<cr>')
 
--- map('n', '<leader>q', '<cmd>q<cr>')
 map('n', '<cr>', 'i<cr><esc>')
 
 map('i', '{', '{}<left>')

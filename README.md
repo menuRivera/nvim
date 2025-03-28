@@ -15,6 +15,7 @@ nvim
 ## TODO
 - [ ] Split buffer keymappings / configuration 
 - [ ] DAP configs
+- [ ] Migrate to [blink.cmp?](https://github.com/Saghen/blink.cmp)
 - [x] Migrate to [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [x] LSP 
 - [x] GitSigns

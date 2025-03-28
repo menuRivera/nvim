@@ -11,13 +11,13 @@ cmp.setup({
 			menu = ({
 				buffer = "[Buffer]",
 				nvim_lsp = "[LSP]",
-				sql = "[SQL]",
+				-- sql = "[SQL]",
 				luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
 			}),
 			preset = "codicons",
 			symbol_map = {
-				sql = "",
+				-- sql = "",
 				-- 	Text = "󰉿",
 				-- 	Method = "󰆧",
 				-- 	Function = "󰊕",
@@ -90,7 +90,7 @@ cmp.setup({
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' }, -- For luasnip users.
 		{ name = 'nvim_lua' },
-		{ name = 'sql' },
+		-- { name = 'sql' },
 	}, {
 		{ name = 'buffer' },
 	})
