@@ -1,4 +1,5 @@
-# Nvim rice
+# Nvim config files
+![screenshot](./assets/dashboard.png)
 ## Installation
 1. Install [neovim](https://neovim.io)
 2. Clone this repository inside ~/.config/
@@ -25,7 +26,10 @@ nvim
 - [x] Autocompletion
 
 ## Screenshots
-![screenshot](./assets/base_ui.png)
-![screenshot](./assets/file_explorer.png)
-![screenshot](./assets/live_grep.png)
-![screenshot](./assets/find_files.png)
+![screenshot](./assets/editor.png)
+![screenshot](./assets/explorer.png)
+![screenshot](./assets/lazygit.png)
+![screenshot](./assets/lsp.png)
+![screenshot](./assets/cmp.png)
+![screenshot](./assets/telescope.png)
+![screenshot](./assets/telescope-2.png)
