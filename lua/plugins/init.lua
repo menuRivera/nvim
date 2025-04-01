@@ -86,18 +86,19 @@ require('lazy').setup({
 
 	{
 		'hrsh7th/nvim-cmp',
+		-- commit = "1e1900b0769324a9675ef85b38f99cca29e203b3",
 		event = "InsertEnter",
 		dependencies = {
-			'petertriho/cmp-git',
-			'onsails/lspkind.nvim',
-			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
+			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-cmdline',
 			'hrsh7th/cmp-nvim-lua',
-			'ray-x/cmp-sql',
+			'petertriho/cmp-git',
+			-- 'ray-x/cmp-sql',
+			'onsails/lspkind.nvim',
 			'L3MON4D3/LuaSnip',
 			-- TODO: fix this
-			-- 'rafamadriz/friendly-snippets',
+			'rafamadriz/friendly-snippets',
 			'saadparwaiz1/cmp_luasnip',
 		},
 		config = function()
@@ -121,21 +122,9 @@ require('lazy').setup({
 	-- EXTRAS
 	{
 		"folke/snacks.nvim",
-		keys = {
-			{ "<c-g>", "<cmd>lua Snacks.lazygit()<cr>" }
-		},
-		-- map('n', '<c-g>', '<cmd>lua Snacks.lazygit()<cr>')
-		---@type snacks.Config
-		opts = {
-			lazygit = {
-				configure = true,
-				config = {
-					gui = {
-						nerdFontsVersion = "",
-					},
-				},
-			}
-		}
+		config = function()
+			require('plugins.config.snacks')
+		end
 	},
 	{
 		'Wansmer/treesj',

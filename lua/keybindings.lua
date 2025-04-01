@@ -80,3 +80,8 @@ map('n', 'gH', '<cmd>BufferLineMovePrev<cr>')
 map('n', '<leader>t', '<cmd>TSJToggle<cr>')
 map('n', '<leader>s', '<cmd>TSJSplit<cr>')
 map('n', '<leader>j', '<cmd>TSJJoin<cr>')
+
+-- snacks
+map('n', '<c-g>', '<cmd>lua Snacks.lazygit()<cr>')
+map('n', '<leader>de', '<cmd>lua Snacks.dim.enable()<cr>')
+map('n', '<leader>dd', '<cmd>lua Snacks.dim.disable()<cr>')
