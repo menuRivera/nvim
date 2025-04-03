@@ -70,23 +70,8 @@ require('lazy').setup({
 		opts = {},
 		lazy = false
 	},
-	-- {
-	-- 	'saghen/blink.cmp',
-	-- 	dependencies = { 'rafamadriz/friendly-snippets' },
-	-- 	version = '1.*',
-	-- 	opts = {
-	-- 		keymap = { preset = 'enter' },
-	-- 		sources = {
-	-- 			default = { 'lsp', 'path', 'snippets', 'buffer' }
-	-- 		},
-	-- 		fuzzy = { implementation = "prefer_rust_with_warning" }
-	-- 	}
-	--
-	-- },
-
 	{
 		'hrsh7th/nvim-cmp',
-		-- commit = "1e1900b0769324a9675ef85b38f99cca29e203b3",
 		event = "InsertEnter",
 		dependencies = {
 			'hrsh7th/cmp-path',
@@ -94,12 +79,10 @@ require('lazy').setup({
 			'hrsh7th/cmp-cmdline',
 			'hrsh7th/cmp-nvim-lua',
 			'petertriho/cmp-git',
-			-- 'ray-x/cmp-sql',
 			'onsails/lspkind.nvim',
 			'L3MON4D3/LuaSnip',
-			-- TODO: fix this
 			'rafamadriz/friendly-snippets',
-			'saadparwaiz1/cmp_luasnip',
+			'saadparwaiz1/cmp_luasnip'
 		},
 		config = function()
 			require("plugins.config.cmp")
