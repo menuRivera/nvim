@@ -10,48 +10,55 @@ require('lazy').setup({
 	},
 	{
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+		event = { 'BufReadPre', 'BufNewFile' },
+		-- dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
 		config = function()
 			require("plugins.config.lualine")
 		end,
-		lazy = false
 	},
 
 	-- CORE
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		lazy = false,
-		dependencies = "nvim-tree/nvim-web-devicons",
+		cmd = { 'NvimTreeToggle' },
+		-- dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("plugins.config.nvim-tree")
 		end,
 	},
 	{
 		'akinsho/bufferline.nvim',
-		lazy = false,
+		event = { 'BufReadPre', 'BufNewFile' },
 		version = "*",
-		dependencies = 'nvim-tree/nvim-web-devicons',
+		-- dependencies = 'nvim-tree/nvim-web-devicons',
 		config = function()
 			require("plugins.config.bufferline")
 		end,
 	},
 	{
-		'nvim-telescope/telescope-fzf-native.nvim',
-		build = 'make'
-	},
-	{
 		'nvim-telescope/telescope.nvim',
+		-- lazy = true,
+		cmd = { 'Telescope' },
 		tag = '0.1.4',
-		dependencies = 'nvim-lua/plenary.nvim',
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'nvim-telescope/telescope-fzf-native.nvim',
+		},
 		config = function()
 			require("plugins.config.telescope")
 		end,
 	},
+
+	{
+		'nvim-telescope/telescope-fzf-native.nvim',
+		lazy = true,
+		build = 'make'
+	},
 	{
 		'akinsho/toggleterm.nvim',
 		version = "*",
-		-- config = true, ??
+		keys = { '<c-`>' },
 		config = function()
 			require("plugins.config.toggleterm")
 		end,
@@ -68,7 +75,7 @@ require('lazy').setup({
 	{
 		'williamboman/mason.nvim',
 		opts = {},
-		lazy = false
+		event = { 'BufReadPre', 'BufNewFile' },
 	},
 	{
 		'hrsh7th/nvim-cmp',
@@ -119,29 +126,36 @@ require('lazy').setup({
 	},
 	{
 		'lewis6991/gitsigns.nvim',
+		event = { 'BufReadPre', 'BufNewFile' },
 		config = function()
 			require("plugins.config.gitsigns")
 		end,
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
+		event = { 'BufReadPre', 'BufNewFile' },
 		config = function()
 			require("plugins.config.nvim-treesitter")
 		end,
 	},
 	{
 		'brenoprata10/nvim-highlight-colors',
+		ft = { "tsx", "jsx", "html", "scss", "sass", "css", "vue" },
 		config = function()
 			require("plugins.config.nvim-highlight-colors")
 		end,
 	},
 	{
 		'numToStr/Comment.nvim',
+		lazy = true,
 		config = function()
 			require("plugins.config.comment")
 		end,
 	},
-	'JoosepAlviste/nvim-ts-context-commentstring',
+	{
+		'JoosepAlviste/nvim-ts-context-commentstring',
+		lazy = true,
+	},
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

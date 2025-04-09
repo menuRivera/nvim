@@ -1,6 +1,5 @@
 -- Keybindings
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {options})
-local telescope = require('telescope.builtin')
 
 local function map(mode, lhs, rhs, opts)
 	local options = { noremap = true }
@@ -47,8 +46,8 @@ map('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
 -- map('n', '<leader>f', '<cmd>LspZeroFormat<cr>')
 
 -- telescope
-map('n', '<C-p>', telescope.find_files)
-map('n', '<C-f>', telescope.live_grep)
+map('n', '<C-p>', '<cmd>Telescope find_files<cr>')
+map('n', '<C-f>', '<cmd>Telescope live_grep<cr>')
 -- map('n', '<C-g>', telescope.git_status)
 
 -- gitsigns

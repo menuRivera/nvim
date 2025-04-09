@@ -11,3 +11,5 @@ require('telescope').setup {
 		fzf = true
 	}
 }
+
+require('telescope').load_extension('fzf')
