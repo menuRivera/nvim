@@ -10,7 +10,7 @@ require('lazy').setup({
 	},
 	{
 		'nvim-lualine/lualine.nvim',
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = 'VeryLazy',
 		-- dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
 		config = function()
 			require("plugins.config.lualine")
@@ -29,7 +29,7 @@ require('lazy').setup({
 	},
 	{
 		'akinsho/bufferline.nvim',
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = 'VeryLazy',
 		version = "*",
 		-- dependencies = 'nvim-tree/nvim-web-devicons',
 		config = function()
@@ -75,7 +75,7 @@ require('lazy').setup({
 	{
 		'williamboman/mason.nvim',
 		opts = {},
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = 'VeryLazy',
 	},
 	{
 		'hrsh7th/nvim-cmp',
@@ -98,7 +98,7 @@ require('lazy').setup({
 	{
 		'neovim/nvim-lspconfig',
 		cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = 'VeryLazy',
 		dependencies = {
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'williamboman/mason.nvim' },
@@ -133,7 +133,7 @@ require('lazy').setup({
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
-		event = { 'BufReadPre', 'BufNewFile' },
+		event = 'VeryLazy',
 		config = function()
 			require("plugins.config.nvim-treesitter")
 		end,
