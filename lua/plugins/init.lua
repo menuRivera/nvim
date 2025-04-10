@@ -65,7 +65,7 @@ require('lazy').setup({
 	},
 	{
 		"folke/trouble.nvim",
-		opts = {},
+		opts = { icons = false },
 		tag = "v2.10.0",
 		cmd = { "Trouble", "TroubleToggle" },
 		requires = "nvim-tree/nvim-web-devicons",
