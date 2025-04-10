@@ -1,4 +1,6 @@
-require('telescope').setup {
+local telescope = require('telescope')
+telescope.load_extension('fzf')
+telescope.setup {
 	defaults = {
 		color_devicons = false,
 	},
@@ -11,5 +13,3 @@ require('telescope').setup {
 		fzf = true
 	}
 }
-
-require('telescope').load_extension('fzf')
