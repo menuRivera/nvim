@@ -30,6 +30,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- hover and signature window style
+-- fix?
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 	vim.lsp.handlers.hover,
 	{
