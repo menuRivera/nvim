@@ -40,7 +40,7 @@ require('lazy').setup({
 		'nvim-telescope/telescope.nvim',
 		-- lazy = true,
 		cmd = { 'Telescope' },
-		tag = '0.1.4',
+		tag = '0.1.8',
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'nvim-telescope/telescope-fzf-native.nvim',
@@ -66,6 +66,7 @@ require('lazy').setup({
 	{
 		"folke/trouble.nvim",
 		opts = { icons = false },
+		-- todo: update trouble.nvim
 		tag = "v2.10.0",
 		cmd = { "Trouble", "TroubleToggle" },
 		requires = "nvim-tree/nvim-web-devicons",
