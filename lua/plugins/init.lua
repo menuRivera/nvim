@@ -98,8 +98,8 @@ require('lazy').setup({
 	},
 	{
 		'neovim/nvim-lspconfig',
-		cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
-		event = 'VeryLazy',
+		-- cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+		-- event = 'VeryLazy',
 		dependencies = {
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'williamboman/mason.nvim' },
