@@ -47,32 +47,10 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
 -- I hate you vue-language-server
 -- (doesn't work)
 require('mason-lspconfig').setup({
-	ensure_installed = { 'volar', 'ts_ls' },
+	ensure_installed = {},
 	handlers = {
 		function(server_name)
-			if server_name == 'ts_ls' then
-				local vue_typescript_server_path = require('mason-registry').get_package("vue-language-server")
-					:get_install_path() ..
-					"/node_modules/@vue/language-server"
-				require('lspconfig').ts_ls.setup {
-					init_options = {
-						plugins = {
-							{
-								name = "@vue/typescript-plugin",
-								location = vue_typescript_server_path,
-								languages = { "vue", "javascript", "typescript" },
-							},
-						},
-					},
-					filetypes = { "javascript", "javascript.jsx", "javascriptreact", "typescript", "typescript.tsx", "typescriptreact", "vue" },
-				}
-			elseif server_name == 'volar' then
-				require('lspconfig').volar.setup {
-					filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-				}
-			else
-				require('lspconfig')[server_name].setup({})
-			end
+			require('lspconfig')[server_name].setup({})
 		end,
 	}
 })
