@@ -74,9 +74,12 @@ require('lazy').setup({
 
 	-- LSP
 	{
-		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
 		opts = {},
-		event = 'VeryLazy',
+		lazy = true, -- it will be enabled in lspconfig setup
+		dependencies = {
+			{ 'williamboman/mason.nvim', opts = {}, },
+		},
 	},
 	{
 		'hrsh7th/nvim-cmp',
@@ -102,8 +105,8 @@ require('lazy').setup({
 		-- event = 'VeryLazy',
 		dependencies = {
 			{ 'hrsh7th/cmp-nvim-lsp' },
-			{ 'williamboman/mason.nvim' },
-			{ 'williamboman/mason-lspconfig.nvim' },
+			-- { 'williamboman/mason.nvim' },
+			-- { 'williamboman/mason-lspconfig.nvim' },
 		},
 		config = function()
 			require("plugins.config.lspconfig")

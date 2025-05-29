@@ -1,5 +1,5 @@
 local lsp_defaults = require('lspconfig').util.default_config
-
+local lspconfig = require('lspconfig')
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -44,13 +44,22 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
 	}
 )
 
--- I hate you vue-language-server
--- (doesn't work)
-require('mason-lspconfig').setup({
-	ensure_installed = {},
-	handlers = {
-		function(server_name)
-			require('lspconfig')[server_name].setup({})
-		end,
-	}
-})
+local vue_language_server_path = vim.fn.expand '$MASON/packages' .. '/vue-language-server'
+
+lspconfig.ts_ls.setup {
+	init_options = {
+		plugins = {
+			{
+				name = '@vue/typescript-plugin',
+				location = vue_language_server_path,
+				languages = { 'vue' },
+			},
+		},
+	},
+	filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+}
+
+-- No need to set `hybridMode` to `true` as it's the default value
+lspconfig.volar.setup {}
+
+require('mason-lspconfig').setup()
