@@ -12,6 +12,7 @@ require('lazy').setup({
 		'nvim-lualine/lualine.nvim',
 		-- event = 'VeryLazy',
 		-- dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
+		commit = "15884cee63a8c205334ab13ab1c891cd4d27101a",
 		config = function()
 			require("plugins.config.lualine")
 		end,
