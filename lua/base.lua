@@ -1,5 +1,6 @@
 vim.o.relativenumber = true
 vim.o.number = true
+-- vim.o.guibg = 'none'
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
