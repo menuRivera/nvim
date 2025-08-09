@@ -3,54 +3,58 @@ local colors = {
 	blue   = '#7aa2f7',
 	black  = '#080808',
 	green  = '#73daca',
-	white  = '#c0caf5',
+	white  = '#a9b1d6',
 	red    = '#ff6e66',
 	yellow = '#e0af68',
 	violet = '#bb9af7',
 	grey   = '#3c4157',
 }
 
--- local bubbles_theme = {
--- 	normal = {
--- 		a = { fg = colors.black, bg = colors.blue, gui = 'bold' },
--- 		b = { fg = colors.white, bg = colors.grey },
--- 		c = { fg = colors.white },
--- 	},
--- 	insert = {
--- 		a = { fg = colors.black, bg = colors.green, gui = 'bold' }
--- 	},
--- 	visual = {
--- 		a = { fg = colors.black, bg = colors.violet, gui = 'bold' }
--- 	},
--- 	replace = {
--- 		a = { fg = colors.black, bg = colors.red, gui = 'bold' }
--- 	},
--- 	command = {
--- 		a = { fg = colors.black, bg = colors.yellow, gui = 'bold' }
--- 	},
--- 	inactive = {
--- 		a = { fg = colors.white, bg = colors.black },
--- 		b = { fg = colors.white, bg = colors.black },
--- 		c = { fg = colors.white },
--- 	},
--- }
+local bubbles_theme = {
+	normal = {
+		a = { fg = colors.white, bg = nil, gui = 'bold' },
+		b = { fg = colors.white, bg = nil },
+		c = { fg = colors.white },
+	},
+	insert = {
+		a = { fg = colors.green, bg = nil, gui = 'bold' }
+	},
+	visual = {
+		a = { fg = colors.violet, bg = nil, gui = 'bold' }
+	},
+	replace = {
+		a = { fg = colors.red, bg = nil, gui = 'bold' }
+	},
+	command = {
+		a = { fg = colors.yellow, bg = nil, gui = 'bold' }
+	},
+	-- 	inactive = {
+	-- 		a = { fg = colors.white, bg = colors.black },
+	-- 		b = { fg = colors.white, bg = colors.black },
+	-- 		c = { fg = colors.white },
+	-- 	},
+}
 
 require('lualine').setup {
 	options = {
 		icons_enabled = false,
-		-- theme = bubbles_theme,
+		theme = bubbles_theme,
 		globalstatus = true,
 		component_separators = '',
-		-- section_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
 	},
 	sections = {
-		lualine_a = { { 'mode', right_padding = 2 } },
+		lualine_a = { { 'mode', separator = { left = '', right = '' }, right_padding = 2 } },
 		lualine_b = { 'branch', { 'filename', path = 1, file_status = false }, 'diff', 'diagnostics' },
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = { 'filetype', 'progress' },
 		lualine_z = {
-			{ 'location', left_padding = 2 }
+			{
+				'location',
+				separator = { left = '', right = '' },
+				left_padding = 2
+			}
 		},
 	},
 	inactive_sections = {

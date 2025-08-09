@@ -61,18 +61,17 @@ map('n', '<C-b>', '<cmd>TroubleToggle document_diagnostics<cr>')
 
 -- bufferline
 -- next buffer
-map('n', 'gt', '<cmd>BufferLineCycleNext<cr>')
-map('n', 'gl', '<cmd>BufferLineCycleNext<cr>')
+map('n', 'gl', '<Plug>(cokeline-focus-next)')
 -- previous buffer
-map('n', 'gT', '<cmd>BufferLineCyclePrev<cr>')
-map('n', 'gh', '<cmd>BufferLineCyclePrev<cr>')
+map('n', 'gh', '<Plug>(cokeline-focus-prev)')
 -- close buffer
 map('n', '<C-w>', '<cmd>bd<cr>')
 map('n', 'X', '<cmd>bd<cr>')
 -- move buffer next
-map('n', 'gL', '<cmd>BufferLineMoveNext<cr>')
+map('n', 'gL', '<Plug>(cokeline-switch-next)')
 -- move buffer prev
-map('n', 'gH', '<cmd>BufferLineMovePrev<cr>')
+map('n', 'gH', '<Plug>(cokeline-switch-prev)')
+
 
 
 -- treesj

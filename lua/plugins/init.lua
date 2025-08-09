@@ -18,8 +18,8 @@ require('lazy').setup({
 			})
 			require("neomodern").load()
 			vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-			vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-			vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
+			vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#171719' })
+			-- vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'black' })
 			vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
@@ -48,13 +48,15 @@ require('lazy').setup({
 		end,
 	},
 	{
-		'akinsho/bufferline.nvim',
-		event = 'VeryLazy',
-		version = "*",
-		-- dependencies = 'nvim-tree/nvim-web-devicons',
+		"willothy/nvim-cokeline",
+		dependencies = {
+			"nvim-lua/plenary.nvim",       -- Required for v0.4.0+
+			"nvim-tree/nvim-web-devicons", -- If you want devicons
+			"stevearc/resession.nvim"      -- Optional, for persistent history
+		},
 		config = function()
-			require("plugins.config.bufferline")
-		end,
+			require("plugins.config.cokeline")
+		end
 	},
 	{
 		'nvim-telescope/telescope.nvim',
