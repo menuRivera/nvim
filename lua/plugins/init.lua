@@ -14,12 +14,13 @@ require('lazy').setup({
 		priority = 1000,
 		config = function()
 			require("neomodern").setup({
-				-- optional configuration here
+				-- theme = 'roseprime',
+				plain_float = true
 			})
 			require("neomodern").load()
 			vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#171719' })
-			-- vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'black' })
+			vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#171719' })
 			vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
@@ -35,6 +36,30 @@ require('lazy').setup({
 		config = function()
 			require("plugins.config.lualine")
 		end,
+	},
+	-- lazy.nvim
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			routes = {
+				{
+					filter = {
+						event = "msg_show",
+						find = "Type :qa and press <Enter> to exit Nvim",
+					},
+					opts = { skip = true },
+				},
+			}
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			-- "rcarriga/nvim-notify",
+		}
 	},
 
 	-- CORE
