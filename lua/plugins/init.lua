@@ -26,6 +26,7 @@ require('lazy').setup({
 			vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
 			vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
+			vim.api.nvim_set_hl(0, 'TabLineFill', { bg = 'none' })
 		end,
 	},
 	{
@@ -36,30 +37,6 @@ require('lazy').setup({
 		config = function()
 			require("plugins.config.lualine")
 		end,
-	},
-	-- lazy.nvim
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {
-			routes = {
-				{
-					filter = {
-						event = "msg_show",
-						find = "Type :qa and press <Enter> to exit Nvim",
-					},
-					opts = { skip = true },
-				},
-			}
-		},
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			-- "rcarriga/nvim-notify",
-		}
 	},
 
 	-- CORE

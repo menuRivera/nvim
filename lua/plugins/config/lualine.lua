@@ -12,7 +12,7 @@ local colors = {
 
 local bubbles_theme = {
 	normal = {
-		a = { fg = colors.white, bg = nil, gui = 'bold' },
+		a = { fg = colors.violet, bg = nil, gui = 'bold' },
 		b = { fg = colors.white, bg = nil },
 		c = { fg = colors.white },
 	},
@@ -20,7 +20,7 @@ local bubbles_theme = {
 		a = { fg = colors.green, bg = nil, gui = 'bold' }
 	},
 	visual = {
-		a = { fg = colors.violet, bg = nil, gui = 'bold' }
+		a = { fg = colors.blue, bg = nil, gui = 'bold' }
 	},
 	replace = {
 		a = { fg = colors.red, bg = nil, gui = 'bold' }
@@ -41,10 +41,10 @@ require('lualine').setup {
 		theme = bubbles_theme,
 		globalstatus = true,
 		component_separators = '',
-		section_separators = { left = '', right = '' },
+		-- section_separators = { left = '', right = '' },
 	},
 	sections = {
-		lualine_a = { { 'mode', separator = { left = '', right = '' }, right_padding = 2 } },
+		lualine_a = { { 'mode', right_padding = 2 } },
 		lualine_b = { 'branch', { 'filename', path = 1, file_status = false }, 'diff', 'diagnostics' },
 		lualine_c = {},
 		lualine_x = {},

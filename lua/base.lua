@@ -10,8 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false
 vim.opt.shortmess:append("cWI")
-vim.opt.shortmess = vim.opt.shortmess + 'cWI'
-vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 0
 -- vim.opt.smartindent = true
 -- vim.opt.cindent = true
 vim.opt.signcolumn = 'yes'
