@@ -1,5 +1,6 @@
 vim.o.relativenumber = true
 vim.o.number = true
+vim.o.winborder = 'rounded' -- Options: "single", "double", "rounded", "solid", "shadow", or false.
 -- vim.o.guibg = 'none'
 
 vim.g.mapleader = " "

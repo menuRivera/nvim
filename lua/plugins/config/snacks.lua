@@ -1,5 +1,12 @@
 require('snacks').setup {
-	lazygit = { configure = false },
+	lazygit = {
+		configure = false,
+		config = {
+			gui = {
+				nerdFontsVersion = ""
+			}
+		}
+	},
 	quickfile = {},
 	bigfile = {},
 	dim = {},

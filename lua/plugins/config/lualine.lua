@@ -12,7 +12,7 @@ local colors = {
 
 local bubbles_theme = {
 	normal = {
-		a = { fg = colors.violet, bg = nil, gui = 'bold' },
+		a = { fg = colors.white, bg = nil, gui = 'bold' },
 		b = { fg = colors.white, bg = nil },
 		c = { fg = colors.white },
 	},
@@ -41,7 +41,7 @@ require('lualine').setup {
 		theme = bubbles_theme,
 		globalstatus = true,
 		component_separators = '',
-		-- section_separators = { left = '', right = '' },
+		section_separators = { left = '', right = '' },
 	},
 	sections = {
 		lualine_a = { { 'mode', right_padding = 2 } },
