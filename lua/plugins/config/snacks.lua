@@ -6,10 +6,10 @@ require('snacks').setup {
 	dashboard = {
 		preset = {
 			header = [[
-	  .,;::clllcc:,'.
-	  'oOK000K0OOOOOOOOOOOxo;
+  .,;::clllcc:,'.
+  'oOK000K0OOOOOOOOOOOxo;
 	'x000OOOOOOOOOOOOOOOOOOOxl.
-	   c00OOOkkkkkkkkkkOOOOOOOOkool.
+   c00OOOkkkkkkkkkkOOOOOOOOkool.
 	  .kxddooolllllloooooddxxxdoooc;,.
 	  col:;;,'''''''',,;;::clooooc;;;;;.
 	  ;,'''''';dkkoc,''''''''',;;;;;;;;;.
