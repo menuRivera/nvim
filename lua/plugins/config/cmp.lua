@@ -1,6 +1,8 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
+local _border = 'rounded'
+
 require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
@@ -65,11 +67,11 @@ cmp.setup({
 	},
 	window = {
 		completion = {
-			border = "rounded",
+			border = _border,
 			side_padding = 1
 		},
 		documentation = {
-			border = "rounded"
+			border = _border
 		}
 	},
 	mapping = cmp.mapping.preset.insert({
