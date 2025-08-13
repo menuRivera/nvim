@@ -30,6 +30,12 @@ require('lazy').setup({
 		end,
 	},
 	{
+		'barrett-ruth/http-codes.nvim',
+		config = true,
+		dependencies = 'ibhagwan/fzf-lua',
+		keys = { { '<leader>h', '<cmd>HTTPCodes<cr>' } }
+	},
+	{
 		'nvim-lualine/lualine.nvim',
 		-- event = 'VeryLazy',
 		-- dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
