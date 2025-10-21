@@ -79,6 +79,23 @@ require('lazy').setup({
 			require("plugins.config.telescope")
 		end,
 	},
+	{
+		'stevearc/conform.nvim',
+		keys = {
+			{
+				'<leader>f',
+				function()
+					require('conform').format({})
+				end,
+				mode = { 'n', 'v' },
+				desc = 'Format current buffer using conform'
+			}
+		},
+		config = function()
+			require("plugins.config.conform")
+		end,
+	},
+
 
 	{
 		'nvim-telescope/telescope-fzf-native.nvim',
