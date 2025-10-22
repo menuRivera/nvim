@@ -85,7 +85,10 @@ require("lazy").setup({
 			{
 				"<leader>f",
 				function()
-					require("conform").format({ async = true })
+					require("conform").format({
+						async = true,
+						lsp_format = "fallback",
+					})
 				end,
 				mode = { "n", "v" },
 				desc = "Format current buffer using conform",
