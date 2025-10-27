@@ -49,7 +49,8 @@ require("lazy").setup({
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		cmd = { "NvimTreeToggle" },
+		-- cmd = { "NvimTreeToggle" },
+		event = "VeryLazy",
 		-- dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("plugins.config.nvim-tree")
@@ -69,7 +70,8 @@ require("lazy").setup({
 	{
 		"nvim-telescope/telescope.nvim",
 		-- lazy = true,
-		cmd = { "Telescope" },
+		-- cmd = { "Telescope" },
+		event = "VeryLazy",
 		tag = "0.1.8",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
