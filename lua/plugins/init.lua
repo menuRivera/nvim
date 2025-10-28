@@ -18,15 +18,6 @@ require("lazy").setup({
 				plain_float = true,
 			})
 			require("neomodern").load()
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#171719" })
-			vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#171719" })
-			vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-			vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" })
-			vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
-			vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-			vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
 		end,
 	},
 	{
@@ -192,6 +183,24 @@ require("lazy").setup({
 		config = function()
 			require("plugins.config.nvim-treesitter")
 		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		opts = {
+			enable = true,
+			multiwindow = false, -- Enable multiwindow support.
+			max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+			min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+			line_numbers = true,
+			multiline_threshold = 20, -- Maximum number of lines to show for a single context
+			trim_scope = "outer", -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+			mode = "cursor", -- Line used to calculate context. Choices: 'cursor', 'topline'
+			-- Separator between context and content. Should be a single character string, like '-'.
+			-- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+			separator = nil,
+			zindex = 20, -- The Z-index of the context window
+			on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+		},
 	},
 	{
 		"brenoprata10/nvim-highlight-colors",
