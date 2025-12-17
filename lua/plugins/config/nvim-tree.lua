@@ -90,7 +90,12 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 				folder_arrow = true,
 				git = true,
 			},
-			-- glyphs = circles.get_nvimtree_glyphs()
+			glyphs = {
+				folder = {
+					arrow_closed = "⏵",
+					arrow_open = "⏷",
+				}
+			}
 		},
 		special_files = { "Cargo.toml", "Makefile", "package.json" },
 		symlink_destination = true,
