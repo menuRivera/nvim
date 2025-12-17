@@ -2,6 +2,8 @@ vim.o.relativenumber = true
 vim.o.number = true
 vim.o.winborder = "rounded" -- Options: "single", "double", "rounded", "solid", "shadow", or false.
 -- vim.o.guibg = 'none'
+vim.opt.encoding = "utf-8"
+vim.scriptencoding = "utf-8"
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"

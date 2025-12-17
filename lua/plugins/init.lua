@@ -179,7 +179,10 @@ require("lazy").setup({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = "VeryLazy",
+		branch = "master",
+		lazy = false,
+		build = ":TSUpdate",
+		-- event = "VeryLazy",
 		config = function()
 			require("plugins.config.nvim-treesitter")
 		end,
