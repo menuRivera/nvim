@@ -10,6 +10,20 @@ require('snacks').setup {
 	quickfile = {},
 	bigfile = {},
 	dim = {},
+	zen = {
+		show = {
+			statusline = true,
+			tabline = true,
+		},
+		win = {
+			width = 120,
+			fixbuf = false,
+			-- backdrop = { transparent = true, blend = 40 },
+		},
+		toggles = {
+			-- dim = false,
+		},
+	},
 	dashboard = {
 		preset = {
 			header = [[
