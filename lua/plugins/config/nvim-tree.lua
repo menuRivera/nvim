@@ -1,23 +1,58 @@
 -- local lib = require("nvim-tree.lib")
 -- local view = require("nvim-tree.view")
 
+-- Define the custom attachment function
 local function on_attach(bufnr)
-	local api = require "nvim-tree.api"
+	local api = require("nvim-tree.api")
 
 	local function opts(desc)
 		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 	end
 
-	-- default mappings
+	-- 1. load default mappings
 	api.config.mappings.default_on_attach(bufnr)
 
-	-- custom mappings
+	-- Custom logic to handle Snacks Zen Mode (floating windows) flawlessly
+	local function override_open_behaviour()
+		local node = api.tree.get_node_under_cursor()
+
+		-- 1. If it's a folder, let nvim-tree handle expansion/navigation
+		if node.type == "directory" then
+			api.node.open.edit()
+			return
+		end
+
+		-- 2. Identify the target window (the one you were in before the tree)
+		local last_win = vim.fn.win_getid(vim.fn.winnr('#'))
+
+		if vim.api.nvim_win_is_valid(last_win) then
+			local win_config = vim.api.nvim_win_get_config(last_win)
+
+			-- Check if the window is floating (relative is not empty)
+			-- This identifies the snacks.zen window
+			if win_config.relative ~= "" then
+				-- Move focus to the Zen window
+				vim.api.nvim_set_current_win(last_win)
+				-- Force the file to open in that window, avoiding splits
+				vim.cmd("edit " .. vim.fn.fnameescape(node.absolute_path))
+				return
+			end
+		end
+
+		-- 3. Fallback: Standard behavior for tiled windows
+		api.node.open.edit()
+	end
+
+	-- 2. Apply your custom mappings
+	-- We map both <CR> and l to our custom logic so they behave the same
+	vim.keymap.set("n", "<CR>", override_open_behaviour, opts("Open (Zen Aware)"))
+	vim.keymap.set('n', 'l', override_open_behaviour, opts('Open (Zen Aware)'))
+
+	-- Navigation and Help
+	vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Parent'))
 	vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-	vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
-	vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Open'))
 	vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
 end
-
 
 require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 	on_attach = on_attach,
@@ -170,7 +205,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
 			quit_on_open = false,
 			resize_window = true,
 			window_picker = {
-				enable = true,
+				enable = false,
 				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
 				exclude = {
 					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },

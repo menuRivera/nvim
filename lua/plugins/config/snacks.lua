@@ -21,7 +21,8 @@ require('snacks').setup {
 			-- backdrop = { transparent = true, blend = 40 },
 		},
 		toggles = {
-			-- dim = false,
+			dim = false,
+			zindex = 1
 		},
 	},
 	dashboard = {
