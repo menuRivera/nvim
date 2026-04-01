@@ -157,6 +157,13 @@ require("lazy").setup({
 
 	-- EXTRAS
 	{
+		-- ai 
+		"ThePrimeagen/99",
+		config = function ()
+			require('plugins.config.99')
+		end
+	},
+	{
 		"folke/snacks.nvim",
 		config = function()
 			require("plugins.config.snacks")
