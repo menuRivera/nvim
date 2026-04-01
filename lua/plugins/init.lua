@@ -2,6 +2,7 @@ require("lazy").setup({
 	{
 		"0xteddybear/noir.nvim",
 		requires = { "nvim-treesitter/nvim-treesitter" },
+		ft = { 'noir' },
 		config = function()
 			-- this version requires aztec nargo, install it and create a symlink like this:
 			-- ln -s /home/manuel/.aztec/versions/4.1.2/bin/nargo /home/manuel/.nargo/bin/aztec-nargo
