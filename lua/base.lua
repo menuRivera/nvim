@@ -37,8 +37,8 @@ vim.diagnostic.config({
 -- folds
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.filetype.add({
-	extension = {
-		nr = 'rust'
-	}
-})
+-- vim.filetype.add({
+-- 	extension = {
+-- 		nr = 'noir'
+-- 	}
+-- })

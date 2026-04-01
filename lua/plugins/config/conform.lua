@@ -14,5 +14,13 @@ require("conform").setup({
 		markdown = { "prettier" },
 		json = { "prettier" },
 		yaml = { "prettier" },
+
+		noir = { "nargo_fmt" },
+	},
+	formatters = {
+		nargo_fmt = {
+			command = "aztec_nargo",
+			args = { "fmt" },
+		},
 	},
 })
