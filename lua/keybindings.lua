@@ -11,6 +11,8 @@ end
 
 -- nvim
 map('n', '<leader>w', '<cmd>w<cr>')
+map('n', 'zl', '20zl')
+map('n', 'zh', '20zh')
 
 map('n', '<cr>', 'i<cr><esc>')
 

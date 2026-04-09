@@ -59,6 +59,13 @@ require('snacks').setup {
 		},
 		sections = {
 			{ section = "header" },
+			-- {
+			-- 	section = "terminal",
+			-- 	cmd = "chafa ~/Downloads/ayon.jpg --format symbols --symbols vhalf --size 60x17 --stretch",
+			-- 	height = 20,
+			-- 	padding = 1,
+			-- },
+
 			-- { section = "terminal", cmd = "cbonsai -l", hl = "header", padding = 1, indent = 0, height = 25 },
 			-- { section = "terminal", cmd = "cowsay $(fortune -s)", hl = "header", padding = 1, indent = 10 },
 			{ section = "startup", icon = "" },
