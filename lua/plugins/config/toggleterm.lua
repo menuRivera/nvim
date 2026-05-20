@@ -1,5 +1,5 @@
 require'toggleterm'.setup{
-	shade_terminals = true,
+	shade_terminals = false,
 	open_mapping = [[<c-`>]],
 	hide_numbers = true,
 	direction = 'float',

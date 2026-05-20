@@ -23,10 +23,10 @@ require("lazy").setup({
 		"cdmill/neomodern.nvim",
 		lazy = false,
 		priority = 1000,
+		-- commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
 		config = function()
 			require("neomodern").setup({
-				-- theme = 'roseprime',
-				plain_float = true,
+				theme = 'iceclimber',
 			})
 			require("neomodern").load()
 		end,
@@ -197,7 +197,7 @@ require("lazy").setup({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		branch = "master",
+		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
 		-- event = "VeryLazy",

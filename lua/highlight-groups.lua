@@ -8,6 +8,9 @@ vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none" })
 
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
+
 vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none", bold = true, italic = true })
 vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#a9b1d6", bold = true })
 -- vim.api.nvim_set_hl(0, "TreesitterContextSeparator", { fg = "#555568", bg = "none" })

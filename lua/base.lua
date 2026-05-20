@@ -26,6 +26,24 @@ vim.g.loaded_newtrw = 1
 vim.g.loaded_newtrwPlugin = 1
 vim.opt.termguicolors = true
 
+-- Match Kitty's Tokyo Night ANSI colors (kitty.conf lines 1165-1194)
+vim.g.terminal_color_0 = "#414868"
+vim.g.terminal_color_1 = "#f7768e"
+vim.g.terminal_color_2 = "#73daca"
+vim.g.terminal_color_3 = "#e0af68"
+vim.g.terminal_color_4 = "#7aa2f7"
+vim.g.terminal_color_5 = "#bb9af7"
+vim.g.terminal_color_6 = "#7dcfff"
+vim.g.terminal_color_7 = "#c0caf5"
+vim.g.terminal_color_8 = "#414868"
+vim.g.terminal_color_9 = "#f7768e"
+vim.g.terminal_color_10 = "#73daca"
+vim.g.terminal_color_11 = "#e0af68"
+vim.g.terminal_color_12 = "#7aa2f7"
+vim.g.terminal_color_13 = "#bb9af7"
+vim.g.terminal_color_14 = "#7dcfff"
+vim.g.terminal_color_15 = "#c0caf5"
+
 -- diagnostics
 vim.diagnostic.config({
 	virtual_text = false,
