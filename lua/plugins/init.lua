@@ -1,7 +1,6 @@
 require("lazy").setup({
 	{
 		"0xteddybear/noir.nvim",
-		requires = { "nvim-treesitter/nvim-treesitter" },
 		ft = { 'noir' },
 		config = function()
 			-- this version requires aztec nargo, install it and create a symlink like this:
@@ -23,7 +22,7 @@ require("lazy").setup({
 		"cdmill/neomodern.nvim",
 		lazy = false,
 		priority = 1000,
-		-- commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
+		commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
 		config = function()
 			require("neomodern").setup({
 				theme = 'iceclimber',
@@ -31,6 +30,7 @@ require("lazy").setup({
 			require("neomodern").load()
 		end,
 	},
+
 	{
 		"barrett-ruth/http-codes.nvim",
 		config = true,
@@ -74,7 +74,7 @@ require("lazy").setup({
 		-- lazy = true,
 		-- cmd = { "Telescope" },
 		event = "VeryLazy",
-		tag = "0.1.8",
+		-- tag = "0.1.8",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
@@ -183,7 +183,6 @@ require("lazy").setup({
 	{
 		"Wansmer/treesj",
 		cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("treesj").setup({})
 		end,
@@ -197,13 +196,8 @@ require("lazy").setup({
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
-		-- event = "VeryLazy",
-		config = function()
-			require("plugins.config.nvim-treesitter")
-		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",

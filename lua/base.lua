@@ -60,3 +60,19 @@ vim.diagnostic.config({
 -- 		nr = 'noir'
 -- 	}
 -- })
+
+-- Patch set-lang-from-info-string! to handle invalidated nodes (Neovim 0.12+)
+local query = require("vim.treesitter.query")
+query.add_directive("set-lang-from-info-string!", function(match, _, bufnr, pred, metadata)
+	local node = match[pred[2]]
+	if not node then
+		return
+	end
+	local ok, text = pcall(vim.treesitter.get_node_text, node, bufnr)
+	if not ok then
+		return
+	end
+	local ft = vim.filetype.match { filename = "a." .. text:lower() }
+	local aliases = { ex = "elixir", pl = "perl", sh = "bash", uxn = "uxntal", ts = "typescript" }
+	metadata["injection.language"] = ft or aliases[text:lower()] or text:lower()
+end, { force = true })
