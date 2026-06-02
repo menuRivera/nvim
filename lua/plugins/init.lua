@@ -241,7 +241,7 @@ require("lazy").setup({
 		ft = { "markdown" },
 		-- fix
 		build = function()
-			vim.fn["mkdp#util#install"]()
+			vim.fn["mkdp#util#install"](true)
 		end,
 	},
 })
