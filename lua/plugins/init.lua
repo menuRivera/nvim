@@ -18,17 +18,27 @@ require("lazy").setup({
 			-- vim.cmd('colorscheme tokyonight-night')
 		end,
 	},
+	-- {
+	-- 	"cdmill/neomodern.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	-- commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
+	-- 	config = function()
+	-- 		require("neomodern").setup({
+	-- 			-- theme = 'iceclimber',
+	-- 		})
+	-- 		require("neomodern").load()
+	-- 	end,
+	-- },
+-- lua/plugins/rose-pine.lua
 	{
-		"cdmill/neomodern.nvim",
+		"rose-pine/neovim",
+		name = "rose-pine",
 		lazy = false,
 		priority = 1000,
-		commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
 		config = function()
-			require("neomodern").setup({
-				theme = 'iceclimber',
-			})
-			require("neomodern").load()
-		end,
+			vim.cmd("colorscheme rose-pine")
+		end
 	},
 
 	{
