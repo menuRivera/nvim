@@ -18,5 +18,5 @@ end
 set_highlights()
 vim.api.nvim_create_autocmd("ColorScheme", { pattern = "*", callback = set_highlights })
 
-vim.opt.winblend = 40
+vim.opt.winblend = 5
 
