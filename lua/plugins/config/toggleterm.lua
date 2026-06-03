@@ -6,7 +6,11 @@ require'toggleterm'.setup{
 	autochdir = true,
 	float_opts = {
 		border = 'curved',
-		winblend = 8
+		winblend = 8,
+	},
+	highlights = {
+		NormalFloat = { link = "NormalFloat" },
+		FloatBorder = { link = "FloatBorder" },
 	},
 }
 
