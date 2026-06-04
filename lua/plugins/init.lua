@@ -30,7 +30,7 @@ require("lazy").setup({
 	-- 		require("neomodern").load()
 	-- 	end,
 	-- },
--- lua/plugins/rose-pine.lua
+	-- lua/plugins/rose-pine.lua
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -208,6 +208,9 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
 		build = ":TSUpdate",
+		config = function()
+			require("plugins.config.treesitter")
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
