@@ -36,6 +36,13 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		config = function()
+			require('rose-pine').setup({
+				highlight_groups = {
+					-- comments are really annoying in this theme
+					Comment = { fg = '#515151' }
+				}
+			})
+
 			vim.cmd("colorscheme rose-pine")
 		end
 	},
