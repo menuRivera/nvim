@@ -1,23 +1,13 @@
 require("lazy").setup({
-	{
-		"0xteddybear/noir.nvim",
-		ft = { 'noir' },
-		config = function()
-			-- this version requires aztec nargo, install it and create a symlink like this:
-			-- ln -s /home/manuel/.aztec/versions/4.1.2/bin/nargo /home/manuel/.nargo/bin/aztec-nargo
-			-- considering that /home/manuel/.nargo/bin is already in the PATH
-			require("noir").setup()
-		end,
-	},
 	-- THEME
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- vim.cmd('colorscheme tokyonight-night')
-		end,
-	},
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		-- vim.cmd('colorscheme tokyonight-night')
+	-- 	end,
+	-- },
 	-- {
 	-- 	"cdmill/neomodern.nvim",
 	-- 	lazy = false,
@@ -25,12 +15,21 @@ require("lazy").setup({
 	-- 	-- commit = "e9a25f8955a2cc92f24091fc366752cd09694209",
 	-- 	config = function()
 	-- 		require("neomodern").setup({
-	-- 			-- theme = 'iceclimber',
+	-- 			theme = 'iceclimber',
 	-- 		})
-	-- 		require("neomodern").load()
+	-- 		-- require("neomodern").load()
 	-- 	end,
 	-- },
-	-- lua/plugins/rose-pine.lua
+	--
+	-- {
+	-- 	"nyoom-engineering/oxocarbon.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		-- vim.cmd('colorscheme oxocarbon')
+	-- 	end
+	-- },
+
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -72,7 +71,7 @@ require("lazy").setup({
 		"willothy/nvim-cokeline",
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- Required for v0.4.0+
-			"nvim-tree/nvim-web-devicons", -- If you want devicons
+			-- "nvim-tree/nvim-web-devicons", -- If you want devicons
 			"stevearc/resession.nvim", -- Optional, for persistent history
 		},
 		config = function()
@@ -132,7 +131,7 @@ require("lazy").setup({
 		-- todo: update trouble.nvim
 		tag = "v2.10.0",
 		cmd = { "Trouble", "TroubleToggle" },
-		requires = "nvim-tree/nvim-web-devicons",
+		-- requires = "nvim-tree/nvim-web-devicons",
 	},
 
 	-- LSP
@@ -255,6 +254,17 @@ require("lazy").setup({
 		-- fix
 		build = function()
 			vim.fn["mkdp#util#install"](true)
+		end,
+	},
+	-- lang specific
+	{
+		"0xteddybear/noir.nvim",
+		ft = { 'noir' },
+		config = function()
+			-- this version requires aztec nargo, install it and create a symlink like this:
+			-- ln -s /home/manuel/.aztec/versions/4.1.2/bin/nargo /home/manuel/.nargo/bin/aztec-nargo
+			-- considering that /home/manuel/.nargo/bin is already in the PATH
+			require("noir").setup()
 		end,
 	},
 })
