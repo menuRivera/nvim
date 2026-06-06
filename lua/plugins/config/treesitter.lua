@@ -20,6 +20,8 @@ treesitter.install {
 	"vim",
 	"vue",
 	"yaml",
+	"css",
+	"scss",
 }
 
 vim.api.nvim_create_autocmd("FileType", {
