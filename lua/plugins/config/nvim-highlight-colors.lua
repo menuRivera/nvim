@@ -41,14 +41,6 @@ require("nvim-highlight-colors").setup {
 	---Highlight tailwind colors, e.g. 'bg-blue-500'
 	enable_tailwind = false,
 
-	---Set custom colors
-	---Label must be properly escaped with '%' to adhere to `string.gmatch`
-	--- :help string.gmatch
-	custom_colors = {
-		{ label = '%-%-theme%-primary%-color',   color = '#0f1219' },
-		{ label = '%-%-theme%-secondary%-color', color = '#5a5d64' },
-	},
-
 	-- Exclude filetypes or buftypes from highlighting e.g. 'exclude_buftypes = {'text'}'
 	exclude_filetypes = {},
 	exclude_buftypes = {}
