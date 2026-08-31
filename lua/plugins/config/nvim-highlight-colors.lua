@@ -4,8 +4,8 @@ require("nvim-highlight-colors").setup {
 	render = 'virtual',
 
 	---Set virtual symbol (requires render to be set to 'virtual')
-	-- virtual_symbol = '■',
-	virtual_symbol = '⏺',
+	virtual_symbol = '■',
+	-- virtual_symbol = '⏺',
 
 	---Set virtual symbol suffix (defaults to '')
 	virtual_symbol_prefix = '',
@@ -39,7 +39,7 @@ require("nvim-highlight-colors").setup {
 	enable_named_colors = true,
 
 	---Highlight tailwind colors, e.g. 'bg-blue-500'
-	enable_tailwind = false,
+	enable_tailwind = true,
 
 	-- Exclude filetypes or buftypes from highlighting e.g. 'exclude_buftypes = {'text'}'
 	exclude_filetypes = {},

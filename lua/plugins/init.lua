@@ -236,13 +236,13 @@ require("lazy").setup({
 			on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 		},
 	},
-	-- {
-	-- 	"brenoprata10/nvim-highlight-colors",
-	-- 	ft = { "tsx", "jsx", "html", "scss", "sass", "css", "vue" },
-	-- 	config = function()
-	-- 		require("plugins.config.nvim-highlight-colors")
-	-- 	end,
-	-- },
+	{
+		"brenoprata10/nvim-highlight-colors",
+		ft = { "html", "scss", "sass", "css", "vue", "typescriptreact", "javascriptreact" },
+		config = function()
+			require("plugins.config.nvim-highlight-colors")
+		end,
+	},
 	{
 		"numToStr/Comment.nvim",
 		lazy = true,

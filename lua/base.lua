@@ -53,9 +53,9 @@ vim.diagnostic.config({
 })
 
 -- folds
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldlevelstart = 99
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldlevelstart = 99
 -- vim.filetype.add({
 -- 	extension = {
 -- 		nr = 'noir'

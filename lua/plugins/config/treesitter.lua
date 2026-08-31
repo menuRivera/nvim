@@ -19,6 +19,8 @@ treesitter.install {
 	"typescript",
 	"vim",
 	"vue",
+	"xml",
+	"html",
 	"yaml",
 	"css",
 	"scss",
