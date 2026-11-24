@@ -1,10 +1,12 @@
-require'toggleterm'.setup{
+require 'toggleterm'.setup {
 	shade_terminals = false,
 	open_mapping = [[<c-`>]],
 	hide_numbers = true,
 	direction = 'float',
 	autochdir = true,
 	float_opts = {
+		width = 500,
+		height = 500,
 		border = 'curved',
 		winblend = 8,
 	},
@@ -17,8 +19,8 @@ require'toggleterm'.setup{
 -- local Terminal = require'toggleterm.terminal'.Terminal
 
 -- local terminal = Terminal:new({
-	-- direction = 'float',
-	-- float_opts = {
-		-- border = 'double'
-	-- }
+-- direction = 'float',
+-- float_opts = {
+-- border = 'double'
+-- }
 -- })
