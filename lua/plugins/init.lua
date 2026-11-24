@@ -37,6 +37,9 @@ require("lazy").setup({
 		priority = 1000,
 		config = function()
 			require('rose-pine').setup({
+				styles = {
+					italic = false
+				},
 				highlight_groups = {
 					-- comments are really annoying in this theme
 					Comment = { fg = '#515151' }
